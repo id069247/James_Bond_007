@@ -1,0 +1,139 @@
+<h1>JAMES BOND 007 CHARACTER RECORD SHEET</h1>
+<hr/>
+
+<div class="3colrow">
+<div class="col">
+<label>Character Name:  </label><input type="text" name="attr_character_name" />
+<label>Current Cover:  </label><input type="text" name="attr_character_name" />
+<label>Character Rank:  </label><input type="text" name="attr_rank" />
+
+<label>Experience:  </label><input type="text" name="attr_xp" />
+</div>
+
+<div class="col">
+<img src="http://clipart-library.com/images_k/gun-girl-silhouette/gun-girl-silhouette-9.png" />
+
+
+<label>Fame Points:  </label><input type="text" name="attr_famepoints" />
+<label>Hero Points:  </label><input type="text" name="attr_heropoints" />
+</div>
+
+<div class="col">
+
+<label>Appearance:</label><input type="text" name="attr_appearance" />
+<label>Nationality/Ethnicity:</label><input type="text" name="attr_ethnicity" />
+<label>Sex:</label><input type="text" name="attr_sex" />
+<label>Height:</label><input type="text" name="attr_height" />
+<label>Weight:</label><input type="text" name="attr_weight" />
+<label>Hair Color:</label><input type="text" name="attr_hair" />
+<label>Eye Color:</label><input type="text" name="attr_eyes" />
+</div>
+
+</div>
+
+<hr/>
+<div class="3colrow">
+<div class="col">
+<h2>Attributes</h2>
+
+<label>STRENGTH </label><input type="text" name='attr_str' class='sheet-short' value='5'>
+<button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Strength}} {{result=[[1d100]]}} {{VS  [[((@{str} [str]+ @{str} [str])/2) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+<br />
+<label>DEXTERITY </label><input type="text" name='attr_dex' class='sheet-short' value='5'>
+<button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Dexterity}} {{result=[[1d100]]}} {{VS  [[((@{dex} [dex]+ @{dex} [dex])/2) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+<br />
+<label>WILLPOWER </label><input type="text" name='attr_wil' class='sheet-short' value='5'>
+<button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls WillPower}} {{result=[[1d100]]}} {{VS  [[((@{wil} [wil]+ @{wil} [wil])/2) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+<br />
+<label>PERCEPTION </label><input type="text" name='attr_per' class='sheet-short' value='5'>
+<button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Perception}} {{result=[[1d100]]}} {{VS  [[((@{per} [per]+ @{per} [per])/2) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+<br />
+<label>INTELLIGENCE </label><input type="text" name='attr_int' class='sheet-short' value='5'>
+<button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Intelligence}} {{result=[[1d100]]}} {{VS  [[((@{int} [int]+ @{int} [int])/2) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+</div>
+
+<div class="col">
+<h2>Derived Stats</h2>
+<label>Speed</label><input type="text" name="attr_speed" />
+<label>Stamina</label><input type="text" name="attr_stamina" />
+<label>Running</label><input type="text" name="attr_running" />
+<label>Carry</label><input type="text" name="attr_carry" />
+<label>Hand to Hand Combat Class</label><input type="text" name="attr_hthcc" />
+</div>
+
+<div class="col">
+
+<h2>Fields of Experience</h2>
+<textarea name="attr_fieldsofexperience"></textarea>
+
+<hr/>
+<h2>Weaknesses</h2>
+<textarea name="attr_weaknesses"></textarea>
+</div>
+
+</div>
+<hr />
+
+
+
+<div class="3colrow">
+<div class="col">
+<h2>Skills</h2>
+
+Boating......................<input type="number" name="attr_boatingSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Boating}} {{result=[[1d100]]}} {{VS  [[((@{per} [per]+ @{dex} [dex])/2 + @{boatingSkill} [boatingSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+Charisma...................<input type="number" name="attr_charismaSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Charisma}} {{result=[[1d100]]}} {{VS  [[((@{wil} [wil]+ @{wil} [wil])/2 + @{charismaSkill} [charismaSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+Cryptography..............<input type="number" name="attr_cryptographySkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Cryptography}} {{result=[[1d100]]}} {{VS  [[((@{int} [int]+ @{int} [int])/2 + @{cryptographySkill} [cryptographySkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+
+Demolitions................<input type="number" name="attr_demolitionsSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Demolitions}} {{result=[[1d100]]}} {{VS  [[((@{int} [int]+ @{int} [int])/2 + @{demolitionsSkill} [demolitionsSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+Disguise.....................<input type="number" name="attr_disguiseSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Disguise}} {{result=[[1d100]]}} {{VS  [[((@{int} [int]+ @{int} [int])/2 + @{disguiseSkill} [disguiseSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+Diving........................<input type="number" name="attr_divingSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Diving}} {{result=[[1d100]]}} {{VS  [[((@{str} [str]+ @{dex} [dex])/2 + @{divingSkill} [divingSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+
+Driving.......................<input type="number" name="attr_drivingSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Driving}} {{result=[[1d100]]}} {{VS  [[((@{per} [per]+ @{dex} [dex])/2 + @{drivingSkill} [drivingSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+Electronics.................<input type="number" name="attr_electronicsSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Electronics}} {{result=[[1d100]]}} {{VS  [[((@{int} [int]+ @{int} [int])/2 + @{electronicsSkill} [electronicsSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+Evasion.....................<input type="number" name="attr_evasionSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Evasion}} {{result=[[1d100]]}} {{VS  [[((@{str} [str]+ @{dex} [dex])/2 + @{evasionSkill} [evasionSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+
+Fire Combat...............<input type="number" name="attr_firecombatSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Fire Combat}} {{result=[[1d100]]}} {{VS  [[((@{per} [per]+ @{dex} [dex])/2 + @{firecombatSkill} [firecombatSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+Gambling...................<input type="number" name="attr_gamblingSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Gambling}} {{result=[[1d100]]}} {{VS  [[((@{per} [per]+ @{per} [per])/2 + @{gamblingSkill} [gamblingSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+HandtoHand Combat...<input type="number" name="attr_hthcombatSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Hand to Hand Combat}} {{result=[[1d100]]}} {{VS  [[((@{str} [str]+ @{str} [str])/2 + @{hthcombatSkill} [hthcombatSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+
+Interrogation...............<input type="number" name="attr_interrogationSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Interrogation}} {{result=[[1d100]]}} {{VS  [[((@{int} [int]+ @{int} [int])/2 + @{interrogationSkill} [interrogationSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+Local Customs...........<input type="number" name="attr_localcustomsSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Local Customs}} {{result=[[1d100]]}} {{VS  [[((@{per} [per]+ @{per} [per])/2 + @{localcustomsSkill} [localcustomsSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+Locks/Safecracking....<input type="number" name="attr_lockpickingSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Lockpicking Safecracking}} {{result=[[1d100]]}} {{VS  [[((@{dex} [dex]+ @{dex} [dex])/2 + @{lockpickingSkill} [lockpickingSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+
+Mountaineering..........<input type="number" name="attr_mountaineeringSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Mountaineering}} {{result=[[1d100]]}} {{VS  [[((@{wil} [wil]+ @{str} [str])/2 + @{mountaineeringSkill} [mountaineeringSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+Pickpocket................<input type="number" name="attr_pickpocketSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Pickpocket}} {{result=[[1d100]]}} {{VS  [[((@{dex} [dex]+ @{dex} [dex])/2 + @{pickpocketSkill} [pickpocketSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+Piloting.....................<input type="number" name="attr_pilotingSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Piloting}} {{result=[[1d100]]}} {{VS  [[((@{per} [per]+ @{dex} [dex])/2 + @{pilotingSkill} [pilotingSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+
+Riding.......................<input type="number" name="attr_ridingSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Riding}} {{result=[[1d100]]}} {{VS  [[((@{per} [per]+ @{wil} [wil])/2 + @{ridingSkill} [ridingSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+Science....................<input type="number" name="attr_scienceSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Science}} {{result=[[1d100]]}} {{VS  [[((@{int} [int]+ @{int} [int])/2 + @{scienceSkill} [scienceSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+Seduction.................<input type="number" name="attr_seductionSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Seduction}} {{result=[[1d100]]}} {{VS  [[((@{wil} [wil]+ @{charismaSkill} [charismaSkill])/2 + @{seductionSkill} [seductionSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+
+Sixth Sense..............<input type="number" name="attr_sixthsenseSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Sixth Sense}} {{result=[[1d100]]}} {{VS  [[((@{per} [per]+ @{int} [int])/2 + @{sixthsenseSkill} [sixthsenseSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+Stealth......................<input type="number" name="attr_stealthSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Stealth}} {{result=[[1d100]]}} {{VS  [[((@{wil} [wil]+ @{wil} [wil])/2 + @{stealthSkill} [stealthSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+Torture......................<input type="number" name="attr_tortureSkill" class='sheet-short' value='0'/> <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name} rolls Torture}} {{result=[[1d100]]}} {{VS  [[((@{int} [int]+ @{wil} [wil])/2 + @{tortureSkill} [tortureSkill]) * ( ?{EaseFactor|0} ) [EaseFactor]]]%    EaseFactor?{EaseFactor|0}}}'></button><span class='dee'></span><br />
+</div>
+
+<div class="col">
+<h2>QUALITY RESULTS TABLE</h2>
+<img src="https://cdn.discordapp.com/attachments/764731795903479811/770364104610676756/unknown.png" />
+</div>
+
+<div class="col">
+<h2>Equipment</h2>
+<textarea name="attr_equipment"></textarea>
+</div>
+
+</div>
+
+<hr/>
+
+
+
+
+<hr/>
+
+</div>
+</div>
+</div>
+</div>
+
